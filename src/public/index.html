@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "preact/hooks": "/preact/hooks/dist/hooks.mjs",
+          "htm": "/htm/dist/htm.mjs",
+          "htm/preact": "/htm/preact/index.mjs",
+          "preact": "/preact/dist/preact.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    #CONTENT
+    <script id="hydration-data" type="application/json">
+      #PROPS
+    </script>
+    <script type="module">
+      import hydrateComponent from "/public/hydrateComponent.js"
+      import #COMPONENT_NAME from "/public/pages/#COMPONENT_NAME.js"
+
+      hydrateComponent(#COMPONENT_NAME)
+    </script>
+  </body>
+</html>
